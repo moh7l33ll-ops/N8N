@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store | LoopCraft n8n Workflows</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700;800&family=Cairo:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo"><span class="logo-icon">⚡</span><span class="logo-text">LoopCraft</span></a>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link" data-i18n="nav-home">Home</a>
+                <a href="store.html" class="nav-link active" data-i18n="nav-store">Store</a>
+                <a href="how-to-buy.html" class="nav-link" data-i18n="nav-how-to-buy">How to Buy</a>
+                <a href="about.html" class="nav-link" data-i18n="nav-about">About</a>
+            </div>
+            <div class="nav-actions">
+                <button class="icon-btn theme-toggle">🌙</button>
+                <button class="icon-btn lang-toggle">EN</button>
+                <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="../index.html" class="nav-link" data-i18n="nav-home">Home</a>
+        <a href="store.html" class="nav-link active" data-i18n="nav-store">Store</a>
+        <a href="how-to-buy.html" class="nav-link" data-i18n="nav-how-to-buy">How to Buy</a>
+        <a href="about.html" class="nav-link" data-i18n="nav-about">About</a>
+    </div>
+    <section class="page-hero">
+        <div class="container">
+            <div class="section-header reveal"><h1 data-i18n="store-h1">Automation Store</h1><p data-i18n="store-p">Browse our collection of high-performance n8n workflows.</p></div>
+            <div class="filters reveal">
+                <button class="filter-btn active" data-filter="all" data-i18n="filter-all">All</button>
+                <button class="filter-btn" data-filter="marketing" data-i18n="filter-marketing">📧 Marketing</button>
+                <button class="filter-btn" data-filter="social" data-i18n="filter-social">📱 Social Media</button>
+                <button class="filter-btn" data-filter="ecommerce" data-i18n="filter-ecommerce">🛒 E-commerce</button>
+                <button class="filter-btn" data-filter="productivity" data-i18n="filter-productivity">⚙️ Productivity</button>
+                <button class="filter-btn" data-filter="crm" data-i18n="filter-crm">👥 CRM</button>
+            </div>
+            <div class="workflow-grid" id="workflowGrid">
+                <!-- Workflow cards go here (same design as featured ) -->
+                <!-- Example Card 1 -->
+                <div class="workflow-card reveal" data-category="marketing">
+                    <div class="card-icon" style="background: rgba(124, 58, 237, 0.1); color: #7c3aed;">📧</div>
+                    <div class="card-tags"><span class="tag">Marketing</span><span class="tag">Email</span></div>
+                    <h3 data-i18n="wf-1-title">Email Marketing Automation</h3>
+                    <p class="desc" data-i18n="wf-1-desc">Connects Gmail + Google Sheets + Telegram. Auto-send personalized emails, track opens, and get alerts.</p>
+                    <div class="integrations"><span class="chip">Gmail</span><span class="chip">Google Sheets</span><span class="chip">Telegram</span></div>
+                    <div class="card-footer"><span class="price">$25</span><button class="btn btn-primary order-btn" data-name="Email Marketing Automation" data-price="$25" data-i18n="order-now">Order Now</button></div>
+                </div>
+                <!-- Repeat for other 8 workflows as specified in previous output -->
+            </div>
+            <div class="note-box reveal" style="margin-top: 4rem; padding: 2rem; background: var(--bg-secondary); border-radius: 20px; border: 1px solid var(--border-subtle); text-align: center;">
+                <p data-i18n="store-note"><strong>Note:</strong> All purchases are processed manually. Click "Order Now" to see payment instructions and contact us on Instagram to receive your workflow JSON file.</p>
+            </div>
+        </div>
+    </section>
+    <div class="modal-overlay" id="paymentModal">
+        <div class="modal">
+            <div class="modal-header"><h2 id="modalTitle">Workflow Name</h2><span class="modal-price-badge" id="modalPrice">$00</span></div>
+            <div class="modal-steps">
+                <div class="modal-step"><span class="step-idx">1</span><div><p><strong>Send Payment</strong></p><div class="wallet-box"><span class="wallet-address" id="walletAddress">TYourUSDTwalletAddressHere</span><button class="copy-btn" onclick="copyWallet()">Copy</button></div></div></div>
+                <div class="modal-step"><span class="step-idx">2</span><div><p><strong>Take Screenshot</strong></p></div></div>
+                <div class="modal-step"><span class="step-idx">3</span><div><p><strong>Contact Instagram</strong></p></div></div>
+            </div>
+            <div class="modal-footer"><a href="https://instagram.com/your.instagram" target="_blank" class="btn btn-primary">📸 Message on Instagram</a><button class="btn btn-secondary" id="closeModal">Close</button></div>
+        </div>
+    </div>
+    <div class="toast" id="toast">✓ Copied to clipboard!</div>
+    <script src="../js/main.js"></script>
+</body>
+</html>
