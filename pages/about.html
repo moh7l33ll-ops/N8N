@@ -8,6 +8,70 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700;800&family=Cairo:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Skills Bars - Cool Style */
+        .skill-item {
+            margin-bottom: 2rem;
+        }
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.8rem;
+        }
+        .skill-name {
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--text-primary);
+        }
+        .skill-value {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--violet);
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .skill-bar-bg {
+            height: 8px;
+            background: var(--bg-secondary);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+        .skill-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--violet), var(--accent));
+            border-radius: 10px;
+            position: relative;
+            transition: width 1.5s ease-out;
+        }
+        .skill-bar-fill::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 20px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3));
+            border-radius: 10px;
+        }
+        
+        /* Testimonials - Full sentences */
+        .testimonial-text {
+            font-style: normal;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+        .testimonial-author {
+            margin-top: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .testimonial-role {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+        }
+    </style>
 </head>
 <body>
 
@@ -47,41 +111,66 @@
         <div class="container">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 4rem; align-items: center;">
                 <div class="reveal">
-                    <span style="font-size: 4rem; display: block; margin-bottom: 1rem;">👨‍💻</span>
-                    <h1 data-i18n="about-h1">We Build Time-Saving Automations</h1>
+                    <span style="font-size: 4rem; display: block; margin-bottom: 1rem;">⚡</span>
+                    <h1 data-i18n="about-h1">Built for Businesses That Value Time</h1>
                     <p style="margin: 1.5rem 0; font-size: 1.1rem; color: var(--text-secondary);" data-i18n="about-p1">
-                        We specialize in building n8n workflows that eliminate repetitive tasks. Instead of hiring extra staff for data entry and manual work, our automations handle orders, leads, follow-ups, and notifications 24/7.
+                        LoopCraft creates ready-to-use n8n automations for businesses tired of manual work. We connect your existing tools — Gmail, Sheets, WhatsApp, Shopify, and 50+ others — into smooth workflows that run 24/7 without human intervention.
                     </p>
                     <p style="margin-bottom: 2rem; color: var(--text-secondary);" data-i18n="about-p2">
-                        Every workflow is tested in real production environments before delivery. You get working code, clear documentation, and direct support — not just a JSON file.
+                        Our workflows handle order processing, lead follow-ups, social media posting, data syncing, and team notifications. Each automation is tested in real business environments, documented step-by-step, and delivered with direct support via Instagram.
                     </p>
                     <div class="btn-group">
                         <a href="store.html" class="btn btn-primary" data-i18n="view-store">View Store</a>
-                        <a href="https://instagram.com/your.instagram" target="_blank" class="btn btn-secondary" data-i18n="contact-me">Contact Me</a>
+                        <a href="https://instagram.com/your.instagram" target="_blank" class="btn btn-secondary" data-i18n="contact-me">Contact Us</a>
                     </div>
                 </div>
                 
-                <!-- Experience Stats (Replaced percentage bars) -->
+                <!-- Skills Bars - Cool Style -->
                 <div class="reveal" style="background: var(--bg-card); padding: 2.5rem; border-radius: 24px; border: 1px solid var(--border-subtle);">
-                    <div style="margin-bottom: 1.5rem;">
-                        <div style="font-size: 2rem; font-weight: 700; color: var(--violet);">150+</div>
-                        <div style="color: var(--text-secondary); font-size: 0.95rem;">Workflows Delivered</div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Workflows Delivered</span>
+                            <span class="skill-value">150+</span>
+                        </div>
+                        <div class="skill-bar-bg">
+                            <div class="skill-bar-fill" style="width: 90%;"></div>
+                        </div>
                     </div>
-                    <div style="margin-bottom: 1.5rem;">
-                        <div style="font-size: 2rem; font-weight: 700; color: var(--violet);">40+</div>
-                        <div style="color: var(--text-secondary); font-size: 0.95rem;">Happy Clients</div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Happy Clients</span>
+                            <span class="skill-value">40+</span>
+                        </div>
+                        <div class="skill-bar-bg">
+                            <div class="skill-bar-fill" style="width: 75%;"></div>
+                        </div>
                     </div>
-                    <div style="margin-bottom: 1.5rem;">
-                        <div style="font-size: 2rem; font-weight: 700; color: var(--violet);">50+</div>
-                        <div style="color: var(--text-secondary); font-size: 0.95rem;">App Integrations</div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">App Integrations</span>
+                            <span class="skill-value">50+</span>
+                        </div>
+                        <div class="skill-bar-bg">
+                            <div class="skill-bar-fill" style="width: 85%;"></div>
+                        </div>
                     </div>
-                    <div style="margin-bottom: 1.5rem;">
-                        <div style="font-size: 2rem; font-weight: 700; color: var(--violet);">2-3 Days</div>
-                        <div style="color: var(--text-secondary); font-size: 0.95rem;">Average Setup Time</div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Avg. Setup Time</span>
+                            <span class="skill-value">2-3 Days</span>
+                        </div>
+                        <div class="skill-bar-bg">
+                            <div class="skill-bar-fill" style="width: 60%;"></div>
+                        </div>
                     </div>
-                    <div>
-                        <div style="font-size: 2rem; font-weight: 700; color: var(--violet);">24/7</div>
-                        <div style="color: var(--text-secondary); font-size: 0.95rem;">Automation Runs</div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Support Response</span>
+                            <span class="skill-value">&lt; 2 Hours</span>
+                        </div>
+                        <div class="skill-bar-bg">
+                            <div class="skill-bar-fill" style="width: 95%;"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -139,7 +228,7 @@
         </div>
     </section>
 
-    <!-- Testimonials (Arabic/Egyptian dialect) -->
+    <!-- Testimonials - Full Sentences -->
     <section class="testimonials" style="background: var(--bg-secondary);">
         <div class="container">
             <div class="section-header reveal">
@@ -148,38 +237,45 @@
             <div class="workflow-grid reveal">
                 <div class="step-card">
                     <div style="color: #fbbf24; margin-bottom: 1rem; font-size: 1.2rem;">★★★★★</div>
-                    <p style="font-style: italic; color: var(--text-secondary);">"شاطر والله، عمللي نظام طلبات كامل ومش محتاج حد يراجع"</p>
-                    <h4 style="margin-top: 1.5rem;">- أحمد، صاحب متجر إلكتروني</h4>
+                    <p class="testimonial-text">شكراً بجد على الأتمتة، وفرت عليا وقت كتير وخلت الشغل ينظم لوحده من غير ما أضيع يوم كامل في التفاصيل الصغيرة، وأنصح أي حد عنده شركة صغيرة إنه يجرب معاهم.</p>
+                    <div class="testimonial-author">- أحمد</div>
+                    <div class="testimonial-role">صاحب متجر إلكتروني</div>
                 </div>
                 <div class="step-card">
                     <div style="color: #fbbf24; margin-bottom: 1rem; font-size: 1.2rem;">★★★★★</div>
-                    <p style="font-style: italic; color: var(--text-secondary);">"كنت باضيع يوم كامل في الجمع بين Excel و Gmail، دلوقتي بيحصل في 5 دقايق"</p>
-                    <h4 style="margin-top: 1.5rem;">- سما، مديرة تسويق</h4>
+                    <p class="testimonial-text">أنا كنت باضيع يوم كامل كل أسبوع في الجمع بين بيانات Excel وإرسال الإيميلات يدوياً، دلوقتي بفضل الأتمتة اللي عملوها لي كل حاجة بتتحرك لوحدها في 5 دقايق بس، شغل محترم جداً.</p>
+                    <div class="testimonial-author">- سما</div>
+                    <div class="testimonial-role">مديرة تسويق</div>
                 </div>
                 <div class="step-card">
                     <div style="color: #fbbf24; margin-bottom: 1rem; font-size: 1.2rem;">★★★★★</div>
-                    <p style="font-style: italic; color: var(--text-secondary);">"الأتمتة وفرتلي 3 موظفين في الشهر، ربنا يباركلك"</p>
-                    <h4 style="margin-top: 1.5rem;">- زياد، صاحب شركة لوجستية</h4>
+                    <p class="testimonial-text">الأتمتة اللي عملوها لشركتي وفرتلي 3 موظفين في الشهر الواحد، ربنا يباركلكم، الشغل نظيف والدعم سريع ومش بيسيبوني لحد ما كل حاجة تبقى شغالة مظبوط.</p>
+                    <div class="testimonial-author">- زياد</div>
+                    <div class="testimonial-role">صاحب شركة لوجستية</div>
                 </div>
                 <div class="step-card">
                     <div style="color: #fbbf24; margin-bottom: 1rem; font-size: 1.2rem;">★★★★★</div>
-                    <p style="font-style: italic; color: var(--text-secondary);">"السعر حلو والشغل نظيف، أنصح أي حد عنده شركة صغيرة يجرب"</p>
-                    <h4 style="margin-top: 1.5rem;">- إسراء، صاحبة مطعم</h4>
+                    <p class="testimonial-text">السعر حلو جداً مقارنة بالشغل المحترم اللي بيقدموه، وأنصح أي حد عنده مطعم أو محل إنه يجرب الأتمتة دي هتفرق معاه في تنظيم الطلبات والمخزون بشكل كبير.</p>
+                    <div class="testimonial-author">- إسراء</div>
+                    <div class="testimonial-role">صاحبة مطعم</div>
                 </div>
                 <div class="step-card">
                     <div style="color: #fbbf24; margin-bottom: 1rem; font-size: 1.2rem;">★★★★★</div>
-                    <p style="font-style: italic; color: var(--text-secondary);">"أول مرة أشوف حد بيفهم n8n كويس بالشكل ده، حللي مشكلة كانت مخنقاني من سنة"</p>
-                    <h4 style="margin-top: 1.5rem;">- وفاء، مديرة عمليات</h4>
+                    <p class="testimonial-text">أول مرة أشوف حد بيفهم n8n بالشكل المحترم ده، حلولي مشكلة كانت مخنقاني من سنة كاملة ومش لاقي ليها حل، دلوقتي كل حاجة شغالة زي الساعة والحمد لله.</p>
+                    <div class="testimonial-author">- وفاء</div>
+                    <div class="testimonial-role">مديرة عمليات</div>
                 </div>
                 <div class="step-card">
                     <div style="color: #fbbf24; margin-bottom: 1rem; font-size: 1.2rem;">★★★★★</div>
-                    <p style="font-style: italic; color: var(--text-secondary);">"الشغل كان ممتاز والتسليم كان سريع، هتعامل معاهم تاني أكيد"</p>
-                    <h4 style="margin-top: 1.5rem;">- أمل، صاحبة بوتيك أونلاين</h4>
+                    <p class="testimonial-text">الشغل كان ممتاز والتسليم كان سريع جداً، هتعامل معاهم تاني أكيد لأنهم فاهمين إزاي يبسطوا الأتمتة للناس اللي مش متخصصة في التقنية زيي.</p>
+                    <div class="testimonial-author">- أمل</div>
+                    <div class="testimonial-role">صاحبة بوتيك أونلاين</div>
                 </div>
                 <div class="step-card">
                     <div style="color: #fbbf24; margin-bottom: 1rem; font-size: 1.2rem;">★★★★★</div>
-                    <p style="font-style: italic; color: var(--text-secondary);">"مفيش حد قبل كده فاهم احتياجي بالظبط زي ما حصل، شغل دقيق جداً"</p>
-                    <h4 style="margin-top: 1.5rem;">- علي، مدير مشروع</h4>
+                    <p class="testimonial-text">مفيش حد قبل كده فاهم احتياجي بالظبط زي ما حصل معاهم، الشغل دقيق جداً والمتابعة بعد التسليم ممتازة، بجد ناس محترمة وشغلها على أعلى مستوى.</p>
+                    <div class="testimonial-author">- علي</div>
+                    <div class="testimonial-role">مدير مشروع</div>
                 </div>
             </div>
         </div>
