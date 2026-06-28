@@ -4,15 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | LoopCraft n8n Workflows</title>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700;800&family=Cairo:wght@600;700&display=swap" rel="stylesheet">
+    <!-- CSS Link -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="container">
-            <a href="../index.html" class="logo"><span class="logo-icon">⚡</span><span class="logo-text">LoopCraft</span></a>
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">LoopCraft</span>
+            </a>
             <div class="nav-links">
                 <a href="../index.html" class="nav-link" data-i18n="nav-home">Home</a>
                 <a href="store.html" class="nav-link" data-i18n="nav-store">Store</a>
@@ -22,27 +29,184 @@
             <div class="nav-actions">
                 <button class="icon-btn theme-toggle">🌙</button>
                 <button class="icon-btn lang-toggle">EN</button>
-                <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+                <button class="hamburger" id="hamburger">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
         </div>
     </nav>
-    <section class="about-hero">
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="../index.html" class="nav-link" data-i18n="nav-home">Home</a>
+        <a href="store.html" class="nav-link" data-i18n="nav-store">Store</a>
+        <a href="how-to-buy.html" class="nav-link" data-i18n="nav-how-to-buy">How to Buy</a>
+        <a href="about.html" class="nav-link active" data-i18n="nav-about">About</a>
+    </div>
+
+    <!-- About Hero -->
+    <section class="about-hero" style="padding-top: 150px;">
         <div class="container">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr )); gap: 4rem; align-items: center;">
                 <div class="reveal">
-                    <span style="font-size: 4rem;">👨‍💻</span>
+                    <span style="font-size: 4rem; display: block; margin-bottom: 1rem;">👨‍💻</span>
                     <h1 data-i18n="about-h1">Hi, I'm the Automation Guy</h1>
-                    <p style="margin: 1.5rem 0;" data-i18n="about-p1">I specialize in building complex, high-efficiency automation workflows using n8n.</p>
-                    <div class="btn-group"><a href="store.html" class="btn btn-primary" data-i18n="view-store">View Store</a><a href="https://instagram.com/your.instagram" target="_blank" class="btn btn-secondary" data-i18n="contact-me">Contact Me</a></div>
+                    <p style="margin: 1.5rem 0; font-size: 1.1rem; color: var(--text-secondary);" data-i18n="about-p1">I specialize in building complex, high-efficiency automation workflows using n8n. My goal is to help businesses save time and reduce errors by automating repetitive tasks.</p>
+                    <p style="margin-bottom: 2rem; color: var(--text-secondary);" data-i18n="about-p2">With LoopCraft, I'm sharing my most effective, production-ready workflows so you can start automating in minutes, not days.</p>
+                    <div class="btn-group">
+                        <a href="store.html" class="btn btn-primary" data-i18n="view-store">View Store</a>
+                        <a href="https://instagram.com/your.instagram" target="_blank" class="btn btn-secondary" data-i18n="contact-me">Contact Me</a>
+                    </div>
                 </div>
+                
+                <!-- Experience Bars -->
                 <div class="reveal" style="background: var(--bg-card ); padding: 2.5rem; border-radius: 24px; border: 1px solid var(--border-subtle);">
-                    <div class="exp-bar-container"><div class="exp-label"><span>n8n Workflow Design</span><span>95%</span></div><div class="bar-bg"><div class="bar-fill" data-percent="95%"></div></div></div>
-                    <div class="exp-bar-container"><div class="exp-label"><span>API Integrations</span><span>90%</span></div><div class="bar-bg"><div class="bar-fill" data-percent="90%"></div></div></div>
-                    <!-- Other bars -->
+                    <div class="exp-bar-container">
+                        <div class="exp-label"><span>n8n Workflow Design</span><span>95%</span></div>
+                        <div class="bar-bg"><div class="bar-fill" data-percent="95%"></div></div>
+                    </div>
+                    <div class="exp-bar-container">
+                        <div class="exp-label"><span>API Integrations</span><span>90%</span></div>
+                        <div class="bar-bg"><div class="bar-fill" data-percent="90%"></div></div>
+                    </div>
+                    <div class="exp-bar-container">
+                        <div class="exp-label"><span>E-commerce Automation</span><span>88%</span></div>
+                        <div class="bar-bg"><div class="bar-fill" data-percent="88%"></div></div>
+                    </div>
+                    <div class="exp-bar-container">
+                        <div class="exp-label"><span>Marketing Automation</span><span>85%</span></div>
+                        <div class="bar-bg"><div class="bar-fill" data-percent="85%"></div></div>
+                    </div>
+                    <div class="exp-bar-container">
+                        <div class="exp-label"><span>CRM & Data Pipelines</span><span>82%</span></div>
+                        <div class="bar-bg"><div class="bar-fill" data-percent="82%"></div></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Tools Section -->
+    <section class="tools" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 data-i18n="tools-h2">Tools & Integrations</h2>
+                <p data-i18n="tools-p">Expertise across the entire automation ecosystem.</p>
+            </div>
+            <div class="tools-grid reveal">
+                <div class="tool-chip">n8n</div><div class="tool-chip">OpenAI</div><div class="tool-chip">Stripe</div><div class="tool-chip">Shopify</div>
+                <div class="tool-chip">Gmail</div><div class="tool-chip">Slack</div><div class="tool-chip">Telegram</div><div class="tool-chip">Airtable</div>
+                <div class="tool-chip">HubSpot</div><div class="tool-chip">Google Sheets</div><div class="tool-chip">Discord</div><div class="tool-chip">WhatsApp</div>
+                <div class="tool-chip">ActiveCampaign</div><div class="tool-chip">WooCommerce</div><div class="tool-chip">Notion</div><div class="tool-chip">Make</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 data-i18n="why-h2">Why Choose LoopCraft?</h2>
+            </div>
+            <div class="workflow-grid reveal">
+                <div class="step-card" style="text-align: left; padding: 2rem;">
+                    <h3 style="margin-bottom: 1rem;">✅ 100% Tested</h3>
+                    <p style="color: var(--text-secondary);">Every workflow is tested in production environments to ensure reliability and stability.</p>
+                </div>
+                <div class="step-card" style="text-align: left; padding: 2rem;">
+                    <h3 style="margin-bottom: 1rem;">📄 Full Documentation</h3>
+                    <p style="color: var(--text-secondary);">Each JSON comes with a setup guide to help you configure your credentials and nodes.</p>
+                </div>
+                <div class="step-card" style="text-align: left; padding: 2rem;">
+                    <h3 style="margin-bottom: 1rem;">💬 Priority Support</h3>
+                    <p style="color: var(--text-secondary);">Get direct help via Instagram if you face any issues during the initial setup.</p>
+                </div>
+                <div class="step-card" style="text-align: left; padding: 2rem;">
+                    <h3 style="margin-bottom: 1rem;">🚀 Production Ready</h3>
+                    <p style="color: var(--text-secondary);">Optimized nodes and error handling logic are included in every single workflow.</p>
+                </div>
+                <div class="step-card" style="text-align: left; padding: 2rem;">
+                    <h3 style="margin-bottom: 1rem;">🌍 Multi-Language</h3>
+                    <p style="color: var(--text-secondary);">We support both Arabic and English communities to scale automations globally.</p>
+                </div>
+                <div class="step-card" style="text-align: left; padding: 2rem;">
+                    <h3 style="margin-bottom: 1rem;">⚡ Fast Delivery</h3>
+                    <p style="color: var(--text-secondary);">Manual verification but fast turnaround times, usually within a few hours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 data-i18n="test-h2">What Our Customers Say</h2>
+            </div>
+            <div class="workflow-grid reveal">
+                <div class="step-card">
+                    <div style="color: #fbbf24; margin-bottom: 1rem; font-size: 1.2rem;">★★★★★</div>
+                    <p style="font-style: italic; color: var(--text-secondary);">"The e-commerce workflow saved me at least 10 hours a week. Setup was easy with the guide."</p>
+                    <h4 style="margin-top: 1.5rem;">- Ahmed K.</h4>
+                </div>
+                <div class="step-card">
+                    <div style="color: #fbbf24; margin-bottom: 1rem; font-size: 1.2rem;">★★★★★</div>
+                    <p style="font-style: italic; color: var(--text-secondary);">"Professional quality n8n files. The error handling logic is much better than what I built myself."</p>
+                    <h4 style="margin-top: 1.5rem;">- Sarah M.</h4>
+                </div>
+                <div class="step-card">
+                    <div style="color: #fbbf24; margin-bottom: 1rem; font-size: 1.2rem;">★★★★★</div>
+                    <p style="font-style: italic; color: var(--text-secondary);">"Fast delivery and very helpful support on Instagram. Highly recommended for any business owner."</p>
+                    <h4 style="margin-top: 1.5rem;">- Jason R.</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="numbers">
+        <div class="container">
+            <div class="steps-grid reveal">
+                <div class="step-card">
+                    <h3 style="font-size: 2.5rem; color: var(--violet);">2+ Years</h3>
+                    <p>Experience</p>
+                </div>
+                <div class="step-card">
+                    <h3 style="font-size: 2.5rem; color: var(--violet);">50+</h3>
+                    <p>Workflows Built</p>
+                </div>
+                <div class="step-card">
+                    <h3 style="font-size: 2.5rem; color: var(--violet);">30+</h3>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="step-card">
+                    <h3 style="font-size: 2.5rem; color: var(--violet);">100%</h3>
+                    <p>Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <a href="../index.html" class="logo">
+                    <span class="logo-icon">⚡</span>
+                    <span class="logo-text">LoopCraft</span>
+                </a>
+                <div class="footer-links" style="margin: 1.5rem 0;">
+                    <a href="../index.html" data-i18n="nav-home">Home</a>
+                    <a href="store.html" data-i18n="nav-store">Store</a>
+                    <a href="how-to-buy.html" data-i18n="nav-how-to-buy">How to Buy</a>
+                    <a href="about.html" data-i18n="nav-about">About</a>
+                </div>
+                <p class="copyright">© 2026 LoopCraft. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
     <script src="../js/main.js"></script>
 </body>
 </html>
