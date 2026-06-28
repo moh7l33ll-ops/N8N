@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | LoopCraft n8n Workflows</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700;800&family=Cairo:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo"><span class="logo-icon">⚡</span><span class="logo-text">LoopCraft</span></a>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link" data-i18n="nav-home">Home</a>
+                <a href="store.html" class="nav-link" data-i18n="nav-store">Store</a>
+                <a href="how-to-buy.html" class="nav-link" data-i18n="nav-how-to-buy">How to Buy</a>
+                <a href="about.html" class="nav-link active" data-i18n="nav-about">About</a>
+            </div>
+            <div class="nav-actions">
+                <button class="icon-btn theme-toggle">🌙</button>
+                <button class="icon-btn lang-toggle">EN</button>
+                <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+    <section class="about-hero">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr )); gap: 4rem; align-items: center;">
+                <div class="reveal">
+                    <span style="font-size: 4rem;">👨‍💻</span>
+                    <h1 data-i18n="about-h1">Hi, I'm the Automation Guy</h1>
+                    <p style="margin: 1.5rem 0;" data-i18n="about-p1">I specialize in building complex, high-efficiency automation workflows using n8n.</p>
+                    <div class="btn-group"><a href="store.html" class="btn btn-primary" data-i18n="view-store">View Store</a><a href="https://instagram.com/your.instagram" target="_blank" class="btn btn-secondary" data-i18n="contact-me">Contact Me</a></div>
+                </div>
+                <div class="reveal" style="background: var(--bg-card ); padding: 2.5rem; border-radius: 24px; border: 1px solid var(--border-subtle);">
+                    <div class="exp-bar-container"><div class="exp-label"><span>n8n Workflow Design</span><span>95%</span></div><div class="bar-bg"><div class="bar-fill" data-percent="95%"></div></div></div>
+                    <div class="exp-bar-container"><div class="exp-label"><span>API Integrations</span><span>90%</span></div><div class="bar-bg"><div class="bar-fill" data-percent="90%"></div></div></div>
+                    <!-- Other bars -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../js/main.js"></script>
+</body>
+</html>
