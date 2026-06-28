@@ -55,21 +55,43 @@
             border-radius: 10px;
         }
         
-        /* Testimonials - Full sentences */
-        .testimonial-text {
-            font-style: normal;
-            line-height: 1.8;
-            font-size: 1.05rem;
+        /* Testimonials - Social Media Style */
+        .testimonial-card {
+            text-align: left;
+            padding: 1.5rem;
         }
-        .testimonial-author {
-            margin-top: 1.5rem;
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+        }
+        .testimonial-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+        .testimonial-name {
             font-weight: 600;
             color: var(--text-primary);
+            font-size: 0.95rem;
         }
-        .testimonial-role {
+        .testimonial-stars {
+            color: #fbbf24;
+            font-size: 0.8rem;
+            margin-top: 0.2rem;
+        }
+        .testimonial-text {
             color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-top: 0.3rem;
+            line-height: 1.6;
+            font-size: 0.95rem;
         }
     </style>
 </head>
@@ -125,7 +147,7 @@
                     </div>
                 </div>
                 
-                <!-- Skills Bars - Cool Style -->
+                <!-- Skills Bars -->
                 <div class="reveal" style="background: var(--bg-card); padding: 2.5rem; border-radius: 24px; border: 1px solid var(--border-subtle);">
                     <div class="skill-item">
                         <div class="skill-header">
@@ -228,55 +250,91 @@
         </div>
     </section>
 
-    <!-- Testimonials - Full Sentences -->
+    <!-- Testimonials - Social Media Style -->
     <section class="testimonials" style="background: var(--bg-secondary);">
         <div class="container">
             <div class="section-header reveal">
                 <h2 data-i18n="test-h2">What Our Customers Say</h2>
             </div>
             <div class="workflow-grid reveal">
-                <div class="step-card">
-                    <div style="color: #fbbf24; margin-bottom: 1rem; font-size: 1.2rem;">★★★★★</div>
-                    <p class="testimonial-text">شكراً بجد على الأتمتة، وفرت عليا وقت كتير وخلت الشغل ينظم لوحده من غير ما أضيع يوم كامل في التفاصيل الصغيرة، وأنصح أي حد عنده شركة صغيرة إنه يجرب معاهم.</p>
-                    <div class="testimonial-author">- أحمد</div>
-                    <div class="testimonial-role">صاحب متجر إلكتروني</div>
+                
+                <div class="step-card testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #667eea, #764ba2);">أ</div>
+                        <div>
+                            <div class="testimonial-name">أحمد</div>
+                            <div class="testimonial-stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">شكراً بجد، وفرت عليا وقت كتير وأنصح بالتعامل معاهم 👍</p>
                 </div>
-                <div class="step-card">
-                    <div style="color: #fbbf24; margin-bottom: 1rem; font-size: 1.2rem;">★★★★★</div>
-                    <p class="testimonial-text">أنا كنت باضيع يوم كامل كل أسبوع في الجمع بين بيانات Excel وإرسال الإيميلات يدوياً، دلوقتي بفضل الأتمتة اللي عملوها لي كل حاجة بتتحرك لوحدها في 5 دقايق بس، شغل محترم جداً.</p>
-                    <div class="testimonial-author">- سما</div>
-                    <div class="testimonial-role">مديرة تسويق</div>
+
+                <div class="step-card testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #f093fb, #f5576c);">س</div>
+                        <div>
+                            <div class="testimonial-name">سما</div>
+                            <div class="testimonial-stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">كنت باضيع يوم كامل في Excel وGmail، دلوقتي كل حاجة بتتعمل لوحدها في 5 دقايق 😍</p>
                 </div>
-                <div class="step-card">
-                    <div style="color: #fbbf24; margin-bottom: 1rem; font-size: 1.2rem;">★★★★★</div>
-                    <p class="testimonial-text">الأتمتة اللي عملوها لشركتي وفرتلي 3 موظفين في الشهر الواحد، ربنا يباركلكم، الشغل نظيف والدعم سريع ومش بيسيبوني لحد ما كل حاجة تبقى شغالة مظبوط.</p>
-                    <div class="testimonial-author">- زياد</div>
-                    <div class="testimonial-role">صاحب شركة لوجستية</div>
+
+                <div class="step-card testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">ز</div>
+                        <div>
+                            <div class="testimonial-name">زياد</div>
+                            <div class="testimonial-stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">الأتمتة وفرتلي 3 موظفين، ربنا يباركلكم الشغل نظيف 🙏</p>
                 </div>
-                <div class="step-card">
-                    <div style="color: #fbbf24; margin-bottom: 1rem; font-size: 1.2rem;">★★★★★</div>
-                    <p class="testimonial-text">السعر حلو جداً مقارنة بالشغل المحترم اللي بيقدموه، وأنصح أي حد عنده مطعم أو محل إنه يجرب الأتمتة دي هتفرق معاه في تنظيم الطلبات والمخزون بشكل كبير.</p>
-                    <div class="testimonial-author">- إسراء</div>
-                    <div class="testimonial-role">صاحبة مطعم</div>
+
+                <div class="step-card testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #fa709a, #fee140);">إ</div>
+                        <div>
+                            <div class="testimonial-name">إسراء</div>
+                            <div class="testimonial-stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">السعر حلو والشغل محترم، أنصح أي حد يجرب 💯</p>
                 </div>
-                <div class="step-card">
-                    <div style="color: #fbbf24; margin-bottom: 1rem; font-size: 1.2rem;">★★★★★</div>
-                    <p class="testimonial-text">أول مرة أشوف حد بيفهم n8n بالشكل المحترم ده، حلولي مشكلة كانت مخنقاني من سنة كاملة ومش لاقي ليها حل، دلوقتي كل حاجة شغالة زي الساعة والحمد لله.</p>
-                    <div class="testimonial-author">- وفاء</div>
-                    <div class="testimonial-role">مديرة عمليات</div>
+
+                <div class="step-card testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #a8edea, #fed6e3); color: #333;">و</div>
+                        <div>
+                            <div class="testimonial-name">وفاء</div>
+                            <div class="testimonial-stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">أول مرة أشوف حد يفهم n8n كويس كده، حلولي مشكلة كانت مخنقاني من سنة 🔥</p>
                 </div>
-                <div class="step-card">
-                    <div style="color: #fbbf24; margin-bottom: 1rem; font-size: 1.2rem;">★★★★★</div>
-                    <p class="testimonial-text">الشغل كان ممتاز والتسليم كان سريع جداً، هتعامل معاهم تاني أكيد لأنهم فاهمين إزاي يبسطوا الأتمتة للناس اللي مش متخصصة في التقنية زيي.</p>
-                    <div class="testimonial-author">- أمل</div>
-                    <div class="testimonial-role">صاحبة بوتيك أونلاين</div>
+
+                <div class="step-card testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #ffecd2, #fcb69f); color: #333;">أ</div>
+                        <div>
+                            <div class="testimonial-name">أمل</div>
+                            <div class="testimonial-stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">التسليم سريع والشغل ممتاز، هتعامل معاهم تاني أكيد ✅</p>
                 </div>
-                <div class="step-card">
-                    <div style="color: #fbbf24; margin-bottom: 1rem; font-size: 1.2rem;">★★★★★</div>
-                    <p class="testimonial-text">مفيش حد قبل كده فاهم احتياجي بالظبط زي ما حصل معاهم، الشغل دقيق جداً والمتابعة بعد التسليم ممتازة، بجد ناس محترمة وشغلها على أعلى مستوى.</p>
-                    <div class="testimonial-author">- علي</div>
-                    <div class="testimonial-role">مدير مشروع</div>
+
+                <div class="step-card testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #667eea, #764ba2);">ع</div>
+                        <div>
+                            <div class="testimonial-name">علي</div>
+                            <div class="testimonial-stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">مفيش حد فاهم احتياجي زيهم قبل كده، شغل دقيق ومتابعة بعد البيع 👌</p>
                 </div>
+
             </div>
         </div>
     </section>
